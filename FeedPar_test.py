@@ -32,7 +32,7 @@ newsurls = {
 	#US Sources
     'ABC':'http://feeds.abcnews.com/abcnews/politicsheadlines',
     'CBS':'http://www.cbsnews.com/latest/rss/politics',
-    'CBS':'http://www.nbcnewyork.com/news/politics/?rss=y',
+    'NBC':'http://www.nbcnewyork.com/news/politics/?rss=y',
     'AP':'http://hosted2.ap.org/atom/APDEFAULT/89ae8247abe8493fae24405546e9a1aa',
 
 }

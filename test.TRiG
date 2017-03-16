@@ -1,0 +1,960 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ks: <http://dkm.fbk.eu/ontologies/knowledgestore#> .
+
+{
+	<http://untitled/#char=0,5;27,34> a ks:CompoundString .
+	
+	<http://untitled/#char=21,26> a ks:EntityMention .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=6,15;27,34> .
+	
+	<http://untitled/#char=16,20> a ks:EntityMention .
+	
+	<http://untitled/> a ks:Text .
+}
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+{
+	<http://untitled/> ks:textHash "GGvGprfIjCnEj4pmgXFaSz" ;
+		ks:hasMention <http://untitled/#char=0,5> , <http://untitled/#char=21,26> .
+}
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+
+{
+	<http://untitled/#char=6,15> nif:beginIndex "6"^^xs:int .
+	
+	<http://untitled/#char=21,26> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=0,15> a ks:ParticipationMention .
+	
+	<http://untitled/#char=6,15;27,34> a ks:CompoundString .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=16,26> .
+	
+	<http://untitled/#char=21,26> nif:anchorOf "count" .
+	
+	<http://untitled/#char=16,26> nif:anchorOf "vote count" .
+	
+	<http://untitled/#char=21,26> a ks:PredicateMention .
+	
+	<http://untitled/.naf> a ks:Resource .
+	
+	<http://untitled/#char=0,5;27,34> a ks:Mention ;
+		nif:endIndex "34"^^xs:int .
+	
+	<http://untitled/#char=16,20> ks:lemma "vote" .
+	
+	<http://untitled/#char=21,34> nif:anchorOf "count efforts" .
+	
+	<http://untitled/#count> <http://groundedannotationframework.org/gaf#denotedBy> <http://untitled/#char=21,26> .
+	
+	<http://untitled/#char=21,26> nif:beginIndex "21"^^xs:int .
+	
+	<http://untitled/#char=16,20> nif:endIndex "20"^^xs:int ;
+		ks:synset <http://www.newsreader-project.eu/syn/00183505-n> ;
+		ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=6,15;27,34> a ks:Mention ;
+		nif:endIndex "34"^^xs:int .
+	
+	<http://untitled/#char=27,34> ks:lemma "effort" .
+	
+	<http://untitled/#char=0,5;27,34> ks:componentSubString <http://untitled/#char=0,5> .
+	
+	<http://untitled/#char=27,34> nif:beginIndex "27"^^xs:int .
+	
+	<http://untitled/#char=16,26> nif:beginIndex "16"^^xs:int .
+	
+	<http://untitled/#char=6,15> nif:endIndex "15"^^xs:int .
+	
+	<http://untitled/.naf> ks:layer ks:layer_text .
+	
+	<http://untitled/#char=0,5> nif:anchorOf "Obama" .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=6,15> .
+	
+	<http://untitled/#char=0,5> a ks:NameMention .
+	
+	<http://untitled/#char=21,34> a ks:Mention .
+}
+@prefix dct: <http://purl.org/dc/terms/> .
+
+{
+	<http://untitled/.naf> dct:creator ks:NAF%20filter.null .
+	
+	<http://untitled/#char=6,15> nif:anchorOf "denounces" .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=16,20> , <http://untitled/#char=0,15> .
+	
+	<http://untitled/#char=0,5;27,34> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=16,26> nif:endIndex "26"^^xs:int .
+	
+	<http://untitled/#char=0,15> nif:endIndex "15"^^xs:int .
+	
+	<http://untitled/#denounce> <http://groundedannotationframework.org/gaf#denotedBy> <http://untitled/#char=6,15> .
+	
+	<http://untitled/#char=6,15> a ks:Mention .
+	
+	<http://untitled/#char=27,34> nif:anchorOf "efforts" .
+	
+	<http://untitled/.naf> dct:creator ks:Stanford%20CoreNLP.null .
+	
+	<http://untitled/#char=16,20> nif:anchorOf "vote" .
+	
+	<http://untitled/#char=27,34> a ks:Mention .
+	
+	<http://untitled/> dct:title "" .
+	
+	<http://untitled/#char=27,34> nif:endIndex "34"^^xs:int .
+	
+	<http://untitled/#char=21,34> nif:endIndex "34"^^xs:int .
+	
+	<http://untitled/#char=6,15;27,34> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=0,15> nif:anchorOf "Obama denounces" .
+	
+	<http://untitled/#char=0,5> a ks:Mention .
+	
+	<http://untitled/#char=27,34> ks:plural true .
+	
+	<http://untitled/.naf> ks:version "v3" .
+	
+	<http://untitled/#char=21,26> ks:synset <http://www.newsreader-project.eu/syn/00634586-n> ;
+		ks:sst <http://www.newsreader-project.eu/sst/noun.act> .
+	
+	<http://untitled/#char=16,20> ks:sst <http://www.newsreader-project.eu/sst/noun.act> .
+	
+	<http://untitled/#char=0,15> a ks:Mention .
+	
+	<http://untitled/.naf> dct:created "2017-03-13T18:03:29.749+0100" .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=0,5;27,34> .
+	
+	<http://untitled/#char=0,5> nif:endIndex "5"^^xs:int .
+	
+	<http://untitled/#char=0,5;27,34> nif:beginIndex "0"^^xs:int .
+	
+	<http://untitled/#char=27,34> a ks:PredicateMention .
+	
+	<http://untitled/#char=16,26> a ks:Mention .
+	
+	<http://untitled/#char=0,5;27,34> a ks:ParticipationMention .
+	
+	<http://untitled/#char=27,34> a ks:EntityMention .
+	
+	<http://untitled/> dct:created "2017-03-13T18:03:07+01:00" ;
+		ks:annotatedWith <http://untitled/.naf> .
+	
+	<http://untitled/.naf> dct:identifier "" .
+	
+	<http://untitled/#effort> <http://groundedannotationframework.org/gaf#denotedBy> <http://untitled/#char=27,34> .
+	
+	<http://untitled/#char=6,15> ks:mentionOf <http://untitled/> ;
+		ks:synset <http://www.newsreader-project.eu/syn/02508245-v> .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=27,34> .
+	
+	<http://untitled/#char=0,5> a ks:EntityMention .
+	
+	<http://untitled/#char=6,15;27,34> ks:componentSubString <http://untitled/#char=6,15> .
+	
+	<http://untitled/#char=27,34> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=21,34> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=21,26> nif:endIndex "26"^^xs:int .
+	
+	<http://untitled/#char=6,15> a ks:PredicateMention .
+	
+	<http://untitled/#char=16,20> nif:beginIndex "16"^^xs:int .
+	
+	ks:NAF%20filter.null dct:title "NAF filter" .
+	
+	<http://untitled/#vote> <http://groundedannotationframework.org/gaf#denotedBy> <http://untitled/#char=16,20> .
+	
+	<http://untitled/#char=27,34> ks:synset <http://www.newsreader-project.eu/syn/00621627-n> .
+	
+	<http://untitled/> dct:creator "" .
+	
+	<http://untitled/.naf> ks:annotationOf <http://untitled/> .
+	
+	<http://untitled/#char=0,5> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/> a ks:Resource .
+	
+	<http://untitled/#char=6,15;27,34> nif:anchorOf "denounces [...] efforts" .
+	
+	<http://untitled/> ks:hasMention <http://untitled/#char=21,34> .
+	
+	<http://untitled/.naf> ks:layer ks:layer_naf-filter .
+	
+	<http://untitled/#char=21,34> nif:beginIndex "21"^^xs:int .
+	
+	<http://untitled/#char=6,15> ks:lemma "denounce" .
+	
+	<http://untitled/#char=6,15;27,34> a ks:ParticipationMention .
+	
+	<http://untitled/#char=16,26> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/#char=0,5;27,34> ks:componentSubString <http://untitled/#char=27,34> .
+}
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+{
+	dbpedia:Barack_Obama <http://groundedannotationframework.org/gaf#denotedBy> <http://untitled/#char=0,5> .
+	
+	<http://untitled/#char=6,15> ks:sst <http://www.newsreader-project.eu/sst/verb.social> .
+	
+	<http://untitled/#char=21,26> a ks:Mention .
+	
+	<http://untitled/#char=0,5;27,34> nif:anchorOf "Obama [...] efforts" .
+	
+	<http://untitled/#char=16,20> a ks:Mention .
+	
+	<http://untitled/#char=21,34> a ks:ParticipationMention .
+	
+	<http://untitled/> dct:language <http://lexvo.org/id/iso639-3/eng> .
+	
+	<http://untitled/#char=0,15> ks:mentionOf <http://untitled/> .
+	
+	<http://untitled/.naf> a ks:NAF .
+	
+	ks:Stanford%20CoreNLP.null dct:title "Stanford CoreNLP" .
+	
+	<http://untitled/#char=6,15;27,34> ks:componentSubString <http://untitled/#char=27,34> ;
+		nif:beginIndex "6"^^xs:int .
+	
+	<http://untitled/#char=0,5> nif:beginIndex "0"^^xs:int .
+	
+	<http://untitled/#char=27,34> ks:sst <http://www.newsreader-project.eu/sst/noun.act> .
+	
+	<http://untitled/#char=0,15> nif:beginIndex "0"^^xs:int .
+	
+	<http://untitled/#char=21,26> ks:lemma "count" .
+}
+@prefix sumo: <http://www.ontologyportal.org/SUMO.owl#> .
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a sumo:Process .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a <http://www.newsreader-project.eu/ontologies/verbnet/judgment-33> .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a <http://www.newsreader-project.eu/ontologies/framenet/Categorization> .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Process .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/framenet/goal> <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:BiologicalProcess .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:NojBdf68R0hKwTvocLlZ3E> {
+	<http://untitled/#count> ks:mod <http://untitled/#vote> .
+}
+
+{
+	<fact:NojBdf68R0hKwTvocLlZ3E> ks:expressedBy <http://untitled/#char=16,26> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a ks:Entity .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a <http://www.newsreader-project.eu/ontologies/verbnet/try-61> .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+@prefix dbyago: <http://dbpedia.org/class/yago/> .
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a dbyago:Effort100621627 .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Physical .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a dbyago:Count100634586 .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:NPnvFFxX1efA6c32Mm6voO> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/nombank/effort.01_0> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:NPnvFFxX1efA6c32Mm6voO> ks:expressedBy <http://untitled/#char=0,5;27,34> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/propbank/try.01_1> <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a ks:Entity .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a <http://framebase.org/ns/frame-Judgment_communication-damn.v> .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:FTjBxtWwgvTLsoAQ_mMwW5> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/propbank/denounce.01_1> <http://untitled/#effort> .
+}
+
+{
+	<fact:FTjBxtWwgvTLsoAQ_mMwW5> ks:expressedBy <http://untitled/#char=6,15;27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a <http://www.newsreader-project.eu/ontologies/framenet/Judgment_communication> .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<fact:EAu2biF-83QAe2L7akGEm1> {
+	dbpedia:Barack_Obama foaf:name "Obama" .
+}
+
+{
+	<fact:EAu2biF-83QAe2L7akGEm1> ks:expressedBy <http://untitled/#char=0,5> .
+}
+
+<fact:KigKi8T4VA8K10w1IfJOCV> {
+	<http://untitled/#denounce> <http://framebase.org/ns/fe-judgment_communication-communicator> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:KigKi8T4VA8K10w1IfJOCV> ks:expressedBy <http://untitled/#char=0,15> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Selecting .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:SocialInteraction .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:KigKi8T4VA8K10w1IfJOCV> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/propbank/denounce.01_0> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:KigKi8T4VA8K10w1IfJOCV> ks:expressedBy <http://untitled/#char=0,15> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a <http://www.newsreader-project.eu/ontologies/nombank/effort.01> .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a ks:Predicate .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:Communication .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a ks:Entity .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:ContentBearingPhysical .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> <http://framebase.org/ns/fe-attempt-goal> <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> rdfs:label "efforts" .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:Entity .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> rdfs:label "count" .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:FTjBxtWwgvTLsoAQ_mMwW5> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/framenet/evaluee> <http://untitled/#effort> .
+}
+
+{
+	<fact:FTjBxtWwgvTLsoAQ_mMwW5> ks:expressedBy <http://untitled/#char=6,15;27,34> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/verbnet/theme> <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:Process .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:EAu2biF-83QAe2L7akGEm1> {
+	dbpedia:Barack_Obama a ks:Entity .
+}
+
+{
+	<fact:EAu2biF-83QAe2L7akGEm1> ks:expressedBy <http://untitled/#char=0,5> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a ks:Predicate .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:Process .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:EAu2biF-83QAe2L7akGEm1> {
+	dbpedia:Barack_Obama rdfs:label "Obama" .
+}
+
+{
+	<fact:EAu2biF-83QAe2L7akGEm1> ks:expressedBy <http://untitled/#char=0,5> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a <http://www.newsreader-project.eu/ontologies/propbank/try.01> .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a ks:Predicate .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:Calculating .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> ks:mod <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:KigKi8T4VA8K10w1IfJOCV> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/framenet/communicator> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:KigKi8T4VA8K10w1IfJOCV> ks:expressedBy <http://untitled/#char=0,15> .
+}
+@prefix sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+
+<fact:KigKi8T4VA8K10w1IfJOCV> {
+	<http://untitled/#denounce> sem:hasActor dbpedia:Barack_Obama .
+}
+
+{
+	<fact:KigKi8T4VA8K10w1IfJOCV> ks:expressedBy <http://untitled/#char=0,15> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a sumo:Physical .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:IntentionalPsychologicalProcess .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sem:Event .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> rdfs:label "denounces" .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:PsychologicalProcess .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a <http://www.newsreader-project.eu/ontologies/framenet/Attempt> .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Voting .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:NPnvFFxX1efA6c32Mm6voO> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/verbnet/agent> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:NPnvFFxX1efA6c32Mm6voO> ks:expressedBy <http://untitled/#char=0,5;27,34> .
+}
+
+<fact:KigKi8T4VA8K10w1IfJOCV> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/verbnet/agent> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:KigKi8T4VA8K10w1IfJOCV> ks:expressedBy <http://untitled/#char=0,15> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a sumo:Entity .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#count> <http://www.newsreader-project.eu/ontologies/framenet/item> <http://untitled/#effort> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/nombank/effort.01_1> <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:LinguisticCommunication .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:EAu2biF-83QAe2L7akGEm1> {
+	dbpedia:Barack_Obama a <http://www.newsreader-project.eu/ontologies/PERSON> .
+}
+
+{
+	<fact:EAu2biF-83QAe2L7akGEm1> ks:expressedBy <http://untitled/#char=0,5> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Entity .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:IntentionalProcess .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:PsychologicalProcess .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:IntentionalProcess .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:NPnvFFxX1efA6c32Mm6voO> {
+	<http://untitled/#effort> <http://www.newsreader-project.eu/ontologies/propbank/try.01_0> dbpedia:Barack_Obama .
+}
+
+{
+	<fact:NPnvFFxX1efA6c32Mm6voO> ks:expressedBy <http://untitled/#char=0,5;27,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:Deciding .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a sem:Event .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a <http://framebase.org/ns/frame-Attempt-try.v> .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:Entity .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a dbyago:Vote100183505 .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sem:Event .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:EAdkE_ypf5iMQSi1x2ia44> {
+	<http://untitled/#effort> a sumo:IntentionalProcess .
+}
+
+{
+	<fact:EAdkE_ypf5iMQSi1x2ia44> ks:expressedBy <http://untitled/#char=27,34> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:Counting .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:IntentionalPsychologicalProcess .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:Stating .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:ContentBearingProcess .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:Physical .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> rdfs:label "vote" .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a sumo:Physical .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#count> <http://framebase.org/ns/fe-categorization-item> <http://untitled/#effort> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:FTjBxtWwgvTLsoAQ_mMwW5> {
+	<http://untitled/#denounce> <http://www.newsreader-project.eu/ontologies/verbnet/theme> <http://untitled/#effort> .
+}
+
+{
+	<fact:FTjBxtWwgvTLsoAQ_mMwW5> ks:expressedBy <http://untitled/#char=6,15;27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a ks:Entity .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:FTjBxtWwgvTLsoAQ_mMwW5> {
+	<http://untitled/#denounce> sem:hasActor <http://untitled/#effort> .
+}
+
+{
+	<fact:FTjBxtWwgvTLsoAQ_mMwW5> ks:expressedBy <http://untitled/#char=6,15;27,34> .
+}
+
+<fact:HnJf6xR47mhLToEqhNCvkB> {
+	<http://untitled/#denounce> a <http://www.newsreader-project.eu/ontologies/propbank/denounce.01> .
+}
+
+{
+	<fact:HnJf6xR47mhLToEqhNCvkB> ks:expressedBy <http://untitled/#char=6,15> .
+}
+
+<fact:AKuhhJkqAEaMNHINnZr5Rv> {
+	<http://untitled/#effort> sem:hasActor <http://untitled/#count> .
+}
+
+{
+	<fact:AKuhhJkqAEaMNHINnZr5Rv> ks:expressedBy <http://untitled/#char=21,34> .
+}
+
+<fact:PcwSlhnWQjiDVOJfzKuUqY> {
+	<http://untitled/#count> a sumo:InternalChange .
+}
+
+{
+	<fact:PcwSlhnWQjiDVOJfzKuUqY> ks:expressedBy <http://untitled/#char=21,26> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:InternalChange .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:NPnvFFxX1efA6c32Mm6voO> {
+	<http://untitled/#effort> sem:hasActor dbpedia:Barack_Obama .
+}
+
+{
+	<fact:NPnvFFxX1efA6c32Mm6voO> ks:expressedBy <http://untitled/#char=0,5;27,34> .
+}
+
+<fact:FTjBxtWwgvTLsoAQ_mMwW5> {
+	<http://untitled/#denounce> <http://framebase.org/ns/fe-judgment_communication-evaluee> <http://untitled/#effort> .
+}
+
+{
+	<fact:FTjBxtWwgvTLsoAQ_mMwW5> ks:expressedBy <http://untitled/#char=6,15;27,34> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:BiologicalProcess .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
+
+<fact:KzqjJkEYOlBI7iYerpiw3l> {
+	<http://untitled/#vote> a sumo:IntentionalProcess .
+}
+
+{
+	<fact:KzqjJkEYOlBI7iYerpiw3l> ks:expressedBy <http://untitled/#char=16,20> .
+}
