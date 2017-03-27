@@ -19,11 +19,12 @@ def my_form_post():
 	identify = 0
 	identifyliteral = "Send news article"
 	newsArticle = request.form['textInput']
-    	url = 'http://localhost:8011/text2rdf'
+    	url = 'http://35.187.76.238:8011/text2rdf'
         content = {'text' : newsArticle }
         r = requests.post(url, data=content)
         transformed = r.text.encode("utf-8")
 	entityList = []
+	extendedentityList = []
 	eventList = []
 	labelList = []
        # matched_lines = [line for line in transformed.split('\n') if ("sem:Event" in line) or ("owl:sameAs" in line)]
@@ -32,23 +33,102 @@ def my_form_post():
 			line = re.sub(r'.*dbpedia', 'dbpedia', line)
 			line = line[:-1]
 			entityList.append(line)
+		if "foaf:name" in line:
+			line = re.sub(r'foaf:name', '', line)
+			line = re.sub(r'.*>', '', line)
+			line = line[:-2]
+			extendedentityList.append(line)
 		if "sem:Event" in line:
 			line = re.sub(r'.*#', '', line)
 			line = line[:-15]
-			eventList.append(line)
+			eventList.append(line)	
 		if "rdfs:label" in line:
-			labelList.append(line)	
+			labelList.append(line)
+	
 	#matched_lines.reverse
-        return render_template("my-form.html", entityList=entityList, eventList=eventList, labelList=labelList)
+        return render_template("my-form.html", entityList=entityList, extendedentityList=extendedentityList, eventList=eventList, labelList=labelList)
 
    if request.form['btn'] == 'Query':
 	   if request.form.getlist('option'):
 		value = request.form.getlist('option')
-		print value
-		
-		return render_template("result.html", results=value)
+		if 1 < len(value) <= 2:
+			finalentity=[]
+			finalevent=[]
+			for i in value:
+				if "dbpedia" in i:
+					finalentity.append(i)
+				else:
+					finalevent.append(i)
+			if len(finalentity) == 2:
+				identifier = "TwoEntities"
+				varent1 = finalentity[0]
+				varent2 = finalentity[1]
+
+				sparql = SPARQLWrapper2("http://localhost:50053/sparql")
+				sparql.setQuery("""
+				SELECT DISTINCT ?actor1Name ?actor2Name ?article ?title ?date ?eventName 
+				WHERE
+				{
+				?actor1 owl:sameAs """+str(varent1)+""" ; gaf:denotedBy ?mention ; foaf:name ?actor1Name.
+				?mention ks:mentionOf ?article .
+				?article dct:title ?title ; dct:created ?date .
+				?actor2 owl:sameAs """+str(varent2)+""" ; gaf:denotedBy ?mention2 ; foaf:name ?actor2Name.
+				?mention2 ks:mentionOf ?article .
+				OPTIONAL {?event a sem:Event; sem:hasActor* ?actor1 ; sem:hasActor* ?actor2 ; rdfs:label ?eventName}
+				}
+
+				""") 
+				sparql.setReturnFormat(JSON)
+				results = sparql.query().convert()
+				headers = ['actor1', 'actor2', 'article', 'title', 'date', 'event']
+			    	
+				return render_template("result.html", headers=headers, results=results, identifier=identifier)
+
+			elif (len(finalentity) == 1) and (len(finalevent) == 1):
+				identifier = "EntityAndEvent"
+				varentity = finalentity[0]
+				varevent = '"' + finalevent[0] + '"'
+				print varevent
+				print varentity
+
+				sparql = SPARQLWrapper2("http://localhost:50053/sparql")
+				sparql.setQuery("""
+				SELECT DISTINCT  ?actorName ?title ?date ?article ?event2Name ?event3Name
+				WHERE
+				{
+				?frame rdfs:isDefinedBy framenet: .
+				?event a sem:Event ; rdfs:label ?eventlabel ; a ?frame .
+				FILTER regex(str(?eventlabel),"""+str(varevent)+""", "i")
+				?event2 a ?frame ; gaf:denotedBy ?mention2 ; rdfs:label ?event2Name.
+
+				?actor  owl:sameAs """+str(varentity)+""" ; gaf:denotedBy ?mention ; foaf:name ?actorName .
+				?mention ks:mentionOf ?article .
+				?article dct:title ?title ; dct:created ?date .
+				?mention2 ks:mentionOf ?article .
+			    
+				OPTIONAL {?event2 sem:hasActor* ?event3 .
+				?event3 rdfs:label ?event3Name .
+				FILTER (?event2!=?event3) }
+				}
+				""") 
+				sparql.setReturnFormat(JSON)
+				results = sparql.query().convert()
+				headers = ['actor', 'title', 'date', 'article', 'event', 'event2']
+			    	
+				return render_template("result.html", headers=headers, results=results, identifier=identifier)
+				
+				#Sparql for 1 entity and 1 event
+			else:
+				message = "Incorrect selection!"
+				return render_template("my-form.html", message=message)
+			
+			return render_template("result.html", results=value)
+		else:
+			message = "Incorrect selection!"
+			return render_template("my-form.html", message=message)
 	   else: 
-		return render_template("my-form.html")
+		message = "Incorrect selection!"
+		return render_template("my-form.html", message=message)
 
    if request.form['btn'] == 'SendForm1':
 	identify = 1
