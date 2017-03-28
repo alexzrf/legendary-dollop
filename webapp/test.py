@@ -29,9 +29,11 @@ def my_form_post():
 	labelList = []
        # matched_lines = [line for line in transformed.split('\n') if ("sem:Event" in line) or ("owl:sameAs" in line)]
 	for line in transformed.split('\n'):
-		if "owl:sameAs" in line:
-			line = re.sub(r'.*dbpedia', 'dbpedia', line)
-			line = line[:-1]
+		if "owl:sameAs" in line and "dbpedia" in line:
+			line = re.sub(r'.*dbpedia:', 'dbpedia:', line)
+			line = re.sub(r'.*resource/', 'dbpedia:', line)
+			line = re.sub(r'>', '', line)
+			line = line[:-2]
 			entityList.append(line)
 		if "foaf:name" in line:
 			line = re.sub(r'foaf:name', '', line)
@@ -281,6 +283,7 @@ def my_form_post():
 	}
 	GROUP BY ?label
 	ORDER by desc(?eventsCount)
+	LIMIT 100
 	""") 
 	sparql.setReturnFormat(JSON)
         results = sparql.query().convert()
